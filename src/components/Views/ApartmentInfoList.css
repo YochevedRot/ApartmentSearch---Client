@@ -1,0 +1,43 @@
+/* ApartmentInfoList.css - clean two-column layout */
+:root {
+    --accent: #8B4513;
+    --bg: #fdfdfd;
+  }
+  
+  .info-list-container {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 20px;
+    background: var(--bg);
+    border-left: 4px solid var(--accent);
+    border-radius: 4px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  
+  .info-list {
+    column-count: 2;
+    column-gap: 40px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  
+  .info-list-item {
+    margin-bottom: 12px;
+    break-inside: avoid;
+  }
+  
+  .info-label {
+    font-weight: bold;
+    color: var(--accent);
+  }
+  
+  .info-value {
+    margin-left: 8px;
+    color: #333;
+  }
+  /* Override to reduce carousel size */
+  .carousel-container {
+    max-width: 600px !important;
+  }
+  

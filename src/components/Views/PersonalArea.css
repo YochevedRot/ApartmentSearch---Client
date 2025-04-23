@@ -1,0 +1,116 @@
+/* PersonalArea.css - Refined Sidebar Style */
+:root {
+    --primary-color: #f0f4f8;  /* very light blue-gray */
+    --secondary-color: #8B4513;
+    --accent: var(--secondary-color);
+    --bg-main: #fff;
+    --text-main: #333;
+    --text-accent: #2c3e50;
+    --text-muted: #777;
+  }
+  
+  /* Container holds sidebar and content in natural flow */
+  .pa-container {
+    display: flex;
+    min-height: 100vh;
+    background: var(--primary-color);
+    /* top bar sits above, so no offset here */
+  }
+  
+  /* Sidebar styles */
+  /* Sidebar styles */
+  .pa-sidebar {
+    width: 220px;
+    background: var(--bg-main);
+    color: var(--text-accent);
+    padding: 24px 16px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    border-right: 2px solid var(--accent);
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    margin-top: 60px; /* offset to sit below TopBar */
+  }
+  
+  .pa-menu-item {
+    padding: 12px 16px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background 0.2s, color 0.2s;
+    color: var(--text-accent);
+    font-weight: 600;
+  }
+  
+  .pa-menu-item:hover {
+    background: var(--primary-color);
+  }
+  
+  .pa-menu-item.active {
+    background: var(--accent);
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  /* Main content flows beside sidebar */
+  .pa-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* vertically center content */
+    align-items: center;     /* horizontally center inner elements */
+    padding: 32px;
+    background: var(--bg-main);
+    overflow-y: auto;
+  }
+  
+  /* List styles */
+  .pa-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 16px;
+  }
+  
+  .pa-list li {
+    background: var(--primary-color);
+    border-left: 4px solid var(--accent);
+    padding: 10px 12px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    color: var(--text-main);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Stats and profile cards */
+  .pa-stats,
+  .pa-profile {
+    background: var(--primary-color);
+    border-left: 4px solid var(--accent);
+    padding: 14px;
+    margin: 18px 0;
+    border-radius: 4px;
+    color: var(--text-main);
+  }
+  
+  /* Empty state */
+  .pa-empty {
+    text-align: center;
+    color: var(--text-muted);
+    padding: 30px 0;
+  }
+  
+  .pa-empty-img {
+    width: 50px;
+    opacity: 0.4;
+    margin-bottom: 10px;
+  }
+  
+  /* Loading and error */
+  .pa-loading,
+  .pa-error {
+    text-align: center;
+    color: var(--accent);
+    padding: 20px 0;
+  }
+  

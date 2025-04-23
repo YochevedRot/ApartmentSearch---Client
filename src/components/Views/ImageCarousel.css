@@ -1,0 +1,47 @@
+/* ImageCarousel.css */
+.carousel-container {
+    width: 80vw;           /* reduced to 80% of viewport width */           /* 90% of viewport width for responsiveness */
+    max-width: 500px;      /* cap at 500px on larger screens */
+    margin: 20px auto;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.carousel-image-wrapper {
+    width: 100%;
+}
+
+.carousel-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 50vh;     /* limit height to half viewport */
+    object-fit: cover;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    border: none;
+    padding: 8px 12px;
+    font-size: 1.25rem;
+    cursor: pointer;
+    border-radius: 4px;
+    z-index: 10;
+}
+
+.carousel-btn.prev {
+    left: 10px;
+}
+
+.carousel-btn.next {
+    right: 10px;
+}
+
+.carousel-btn:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}

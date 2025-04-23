@@ -1,0 +1,90 @@
+/* TopBar.css */
+:root {
+    --primary-color: #708090;   /* slate gray */
+    --secondary-color: #8B4513; /* brown accents */
+    --input-bg: #ffffff;
+    --input-border: #ccc;
+    --button-bg: var(--secondary-color);
+    --button-color: var(--primary-color);
+  }
+  
+  .top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    box-sizing: border-box;
+  }
+  
+  .top-bar-logo {
+    height: 40px;
+    flex: 0 0 auto;
+    margin-bottom: 8px;
+  }
+  
+  .top-bar-search {
+    display: flex;
+    flex: 1 1 auto;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 8px;
+    justify-content: center;
+  }
+  
+  .top-bar-search input {
+    flex: 1 1 100px;
+    min-width: 80px;
+    max-width: 200px;
+    padding: 8px;
+    border: 1px solid var(--input-border);
+    border-radius: 4px;
+    background-color: var(--input-bg);
+    color: #000;
+    box-sizing: border-box;
+  }
+  
+  .top-bar-search button {
+    flex: 0 0 auto;
+    padding: 8px 16px;
+    background-color: var(--button-bg);
+    color: var(--button-color);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  
+  .top-bar-personal {
+    flex: 0 0 auto;
+    padding: 8px 16px;
+    background-color: transparent;
+    color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
+    border-radius: 4px;
+    cursor: pointer;
+    white-space: nowrap;
+    margin-bottom: 8px;
+  }
+  
+  @media (max-width: 600px) {
+    .top-bar {
+      padding: 8px 12px;
+    }
+    .top-bar-logo {
+      height: 32px;
+    }
+    .top-bar-search input, .top-bar-search button, .top-bar-personal {
+      flex: 1 1 100%;
+      max-width: none;
+    }
+  }
+  
